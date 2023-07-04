@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Management CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1><center>Student Management CRUD</center></h1>
+    <hr />
+    <div class="employee-form">
+      <form
+        onsubmit="event.preventDefault();onFormSubmit();"
+        autocomplete="off"
+      >
+        <div>
+          <label>Name</label
+          ><label class="validation-error hide" id="fullNameValidationError"
+            >This field is required.</label
+          >
+          <input type="text" name="Name" id="Name" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        
+        <div>
+          <label>GPA</label>
+          <input type="text" name="gpa" id="gpa" />
+        </div>
+        <div>
+          <label>Age</label>
+          <input type="text" name="age" id="age" />
+        </div>
+        <div>
+          <label>Degree</label>
+          <input type="text" name="degree" id="degree" />
+        </div>
+        <div class="form-action-buttons">
+          <input type="Submit" value="Add student" />
+        </div>
+      </form>
+    </div>
+    <br />
+
+   <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search by Name,email or id">
+    <button onclick="search()">Search</button>
+    </div>
+    
+    <div class="employees-table">
+      <table class="list" id="employeeList">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>GPA</th>
+            <th>Age</th>
+            <th>Degree</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
